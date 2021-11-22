@@ -1,0 +1,21 @@
+<div class="chat__msg">
+  <ng-container *ngIf="messageData?.length > 0; else noData">
+    <div
+      *ngFor="let m of messageData"
+      [ngClass]="{
+        'chat__msg__message-owner': isUser.uid === m.user_id
+      }"
+      class="chat__msg__message"
+    >
+      <span class="chat__msg__message__name">{{ m?.name }}</span>
+      <span class="chat__msg__message__text">{{ m.message }}</span>
+      <span class="chat__msg__message__time">{{
+        m?.time?.seconds * 1000 | date: "mediumTime"
+      }}</span>
+    </div>
+  </ng-container>
+
+  <ng-template #noData>
+    <h1 style="text-align: center">No Messages</h1>
+  </ng-template>
+</div>

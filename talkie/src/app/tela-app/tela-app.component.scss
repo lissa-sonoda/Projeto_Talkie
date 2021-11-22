@@ -1,0 +1,15 @@
+section.tela-app {
+  display: flex;
+  height: 100%;
+  background-color: white;
+  font-size: 16px;
+
+  app-list {
+    height: auto;
+  }
+
+  app-tela-chat {
+    height: 100%;
+    width: 100%;
+  }
+}

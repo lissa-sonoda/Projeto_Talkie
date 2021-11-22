@@ -1,0 +1,225 @@
+/*IMPORTAR FONTE DO GOOGLE FONTS*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+
+/* resetar o css*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  background-color: #f1efff;
+}
+
+.content {
+  background-color: white;
+  border-radius: 15px;
+  width: 960px;
+  height: 430px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/*pseudo elemento*/
+.content::before {
+  content: "";
+  position: absolute;
+  background-color: #473c8d;
+  width: 40%;
+  height: 100%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+  right: 0%;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.title-primary {
+  color: #fff;
+}
+
+.title-second {
+  color: #473c8d;
+}
+
+.description {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.description-primary {
+  color: #fff;
+}
+
+.description-second {
+  color: #473c8d;
+}
+
+.btn {
+  border-radius: 15px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 10px;
+  padding: 10px 50px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 150px;
+  align-self: center;
+  margin-top: 1rem;
+}
+
+.btn-primary {
+  background-color: transparent;
+  border: 1px solid #fff;
+  transition: background-color 0.5s;
+}
+
+.btn-second {
+  background-color: #473c8d;
+  border: 1px solid #fff;
+  transition: background-color 0.5s;
+}
+
+.btn-primary:hover {
+  background-color: #fff;
+  color: #473c8d;
+}
+
+.btn-second:hover {
+  background-color: #fff;
+  border: 1px solid #473c8d;
+  color: #473c8d;
+}
+
+.first-content {
+  display: none;
+  /*display: none; */
+}
+
+.first-content .second-column {
+  z-index: 11;
+}
+
+.first-column {
+  text-align: center;
+  width: 40%;
+  z-index: 10;
+}
+
+.second-column {
+  /*text-align: center;*/
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-media {
+  margin: 1rem 0;
+}
+
+.link-social-media:not(:first-child) {
+  margin-left: 10px;
+}
+
+.link-social-media .item-social-media {
+  color: #473c8d;
+  transition: background-color 0.5s;
+}
+
+.link-social-media:hover .item-social-media {
+  background-color: #473c8d;
+  color: #fff;
+  border-color: #473c8d;
+}
+
+.list-social-media {
+  display: flex;
+  list-style-type: none;
+}
+
+.item-social-media {
+  border: 1px solid #473c8d;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+}
+
+.form input {
+  height: 45px;
+  width: 100%;
+  border: none;
+  background-color: #f1efff;
+}
+
+.label-input {
+  background-color: #f1efff;
+  display: flex;
+  align-items: center;
+  margin: 8px;
+}
+
+.icon-modify {
+  color: #473c8d;
+  padding: 0 5px;
+}
+
+.second-content {
+  position: absolute;
+  display: flex;
+}
+
+.second-content .first-column {
+  order: 2;
+  z-index: 1;
+}
+
+.second-content .second-column {
+  order: 1;
+  z-index: 1;
+}
+
+.password {
+  color: #473c8d;
+  font-size: 14px;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.password::first-letter {
+  text-transform: capitalize;
+}
+
+.imglogin {
+  width: 200px;
+}
+
+.imggoogle {
+  height: 38px;
+}

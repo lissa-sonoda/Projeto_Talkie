@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="content second-content">
+    <div class="first-column">
+      <img class="imglogin" src="./assets/img/logoA.png" alt="" />
+      <p class="description description-primary">ou Inscreva-se</p>
+      <button
+        id="signup"
+        class="btn btn-primary"
+        routerLink="/signup"
+        routerLinkActive="selected"
+      >
+        sign up
+      </button>
+    </div>
+
+    <div class="second-column">
+      <h2 class="title title-second">Entrar na Conta</h2>
+      <p></p>
+      <p class="description description-second">
+        <button mat-raised-button (click)="login()">
+          <img class="imggoogle" src="./assets/img/google1.jpg" alt="" />
+        </button>
+      </p>
+
+      <form action="" class="form">
+        <label class="label-input" for="">
+          <i class="far fa-envelope icon-modify"></i>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            [(ngModel)]="email"
+            required
+          />
+        </label>
+
+        <label class="label-input" for="">
+          <i class="fas fa-lock icon-modify"></i>
+          <input
+            type="password"
+            name="password"
+            placeholder="Senha"
+            [(ngModel)]="password"
+            required
+          />
+        </label>
+
+        <button class="btn btn-second" (click)="loginEmail()">sing in</button>
+      </form>
+    </div>
+  </div>
+</div>

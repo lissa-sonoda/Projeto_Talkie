@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="content first-content">
+    <!---->
+    <!--LADO ESQUERDO-->
+    <div class="first-column">
+      <img class="imglogin" src="./assets/img/logoA.png" alt="" />
+      <p class="description description-primary">
+        Converse com seus Amigos agora!
+      </p>
+      <p class="description description-primary">
+        Já tem uma conta? Faça o seu login!
+      </p>
+      <button
+        id="signin"
+        class="btn btn-primary"
+        routerLink="/login"
+        routerLinkActive="selected"
+      >
+        sign in
+      </button>
+    </div>
+
+    <!--LADO DIREITO-->
+    <div class="second-column">
+      <h2 class="title-second">Crie sua conta</h2>
+
+      <p class="description description-second">
+        Insira os dados abaixo para se cadastrar:
+      </p>
+
+      <form action="" class="form">
+        <label class="label-input" for="">
+          <i class="far fa-user icon-modify"></i>
+          <input
+            type="text"
+            name="name"
+            placeholder="Nome"
+            [(ngModel)]="name"
+            required
+          />
+        </label>
+
+        <label class="label-input" for="">
+          <i class="far fa-envelope icon-modify"></i>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            [(ngModel)]="email"
+            required
+          />
+        </label>
+
+        <label class="label-input" for="">
+          <i class="fas fa-lock icon-modify"></i>
+          <input
+            type="password"
+            name="password"
+            placeholder="Senha"
+            [(ngModel)]="password"
+            required
+          />
+        </label>
+
+        <button class="btn btn-second" (click)="signup()">sign up</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,97 @@
+.chat {
+  height: 100%;
+  flex: 0.65;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    font-size: 1.17rem;
+  }
+
+  &__header {
+    max-height: 60px;
+
+    padding: 10px;
+    background-color: #c5adf1;
+    display: flex;
+
+    &__room-name {
+      flex: 1;
+      margin-left: 20px;
+
+      h4 {
+        margin-bottom: 0;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: small;
+      }
+    }
+
+    &__right > button mat-icon {
+      color: black;
+      font-size: 24px;
+    }
+
+    &__right > button mat-icon.file {
+      transform: rotateY(180deg) rotateZ(-45deg);
+    }
+  }
+
+  &__body {
+    flex: 1;
+    background-image: url("https://images.unsplash.com/photo-1579492450119-80542d516179?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mjl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80");
+    background-repeat: repeat;
+    background-position: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  &__footer {
+    height: 62px;
+    background-color: #c5adf1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid lightgray;
+
+    button mat-icon {
+      color: black;
+    }
+
+    form {
+      display: flex;
+      flex: 1;
+    }
+
+    &__send-message {
+      outline: none;
+      border: 1px solid lightgray;
+      border-radius: 30px;
+      flex: 1;
+      padding: 10px 10px 10px 20px;
+
+      &::placeholder {
+        padding-left: 0.27rem;
+      }
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

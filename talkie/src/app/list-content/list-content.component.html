@@ -1,0 +1,16 @@
+<section
+  class="list-content"
+  routerLink="/room/{{ roomData.id }}"
+  [id]="roomData.id"
+  (click)="onClick()"
+>
+  <img
+    src="https://avatars.dicebear.com/api/bottts/{{ randomSeed }}}.svg"
+    alt="avatar"
+    mat-card-avatar
+  />
+  <div class="list-content__room">
+    <span class="list-content__room__name">{{ roomData.name }}</span>
+    <span class="list-content__room__last-msg">{{ lastMessage }}</span>
+  </div>
+</section>

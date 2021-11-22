@@ -1,0 +1,49 @@
+<section class="list">
+  <div class="list__header">
+    <img
+      alt="avatar"
+      mat-card-avatar
+      src="https://avatars.dicebear.com/api/adventurer-neutral/your-custom-seed.svg"
+    />
+    <div class="list__header__name">
+      <h3>{{ username }}</h3>
+    </div>
+    <div class="list__header__icons">
+      <button [mat-menu-trigger-for]="menu" mat-icon-button>
+        <mat-icon>exit_to_app</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="logout()">Logout</button>
+      </mat-menu>
+    </div>
+  </div>
+
+  <div class="list__search">
+    <div class="list__search__content">
+      <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+        <button class="list__search__content__icon" mat-icon-button>
+          <mat-icon>search_outline</mat-icon>
+        </button>
+        <input
+          class="list__search__content__input"
+          name="search"
+          ngModel
+          placeholder="Search or start new chat"
+          type="text"
+        />
+
+        <button style="display: none" type="submit"></button>
+      </form>
+    </div>
+  </div>
+
+  <div class="list__content">
+    <ng-container *ngFor="let r of roomData; let i = index">
+      <app-list-content
+        [roomData]="r"
+        [randomSeed]="randomSeed[i]"
+        (seedValue)="seedData($event)"
+      ></app-list-content>
+    </ng-container>
+  </div>
+</section>
